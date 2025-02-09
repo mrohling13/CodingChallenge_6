@@ -89,7 +89,7 @@ const discountedOrders = applyBulkDiscount(orders, amount => amount > 500 ? amou
 console.log(discountedOrders);
 
 // Task 7: Closures
-function createExpenseTracker() {
+function createExpenseTracker() { // function  used to track expenses
     let totalExpenses = 0;
     return function (expense) {
         totalExpenses += expense;
@@ -102,3 +102,14 @@ let tracker = createExpenseTracker();
 console.log(tracker(200)); // Total Expenses: $200
 console.log(tracker(150)); // Total Expenses: $350
 
+// Task 8: Recursion in JavaScript
+function calculateYearsToPromotion(employeeLevel) {  // Function used to calculate years to promotion
+    if (employeeLevel >= 10) {
+        return 0;
+    }
+    return 2 + calculateYearsToPromotion(employeeLevel + 1);
+}
+
+// Test Data for Task 8
+console.log(`Years to Level 10: ${calculateYearsToPromotion(7)}`); // Years to Level 10: 6
+console.log(`Years to Level 10: ${calculateYearsToPromotion(5)}`); // Years to Level 10: 10
