@@ -78,3 +78,12 @@ function convertCurrency(amount, exchangeRate) {
 console.log(convertCurrency(100, 1.1)); // Converted Amount: $110.00
 console.log(convertCurrency(250, 0.85)); // Converted Amount: $212.50
 
+// Task 6: Higher-Order Functions
+function applyBulkDiscount(orders, discountFunction) {
+    return orders.map(order => discountFunction(order));
+}
+
+// Test Data for Task 6 
+let orders = [200, 600, 1200, 450, 800];
+const discountedOrders = applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount);
+console.log(discountedOrders);
