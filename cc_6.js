@@ -68,4 +68,13 @@ function calculateSubscriptionCost(plan, months, discount = 0) {
 console.log(calculateSubscriptionCost("Basic", 6, 10)); // Total Cost: $5
 console.log(calculateSubscriptionCost("Premium", 12, 0)); // Total Cost: $240
 
+// Task 5: Returning Values
+function convertCurrency(amount, exchangeRate) {
+    const convertedAmount = amount * exchangeRate;
+    return `Converted Amount: $${convertedAmount.toFixed(2)}`;
+}
+
+// Test Data for Task 5
+console.log(convertCurrency(100, 1.1)); // Converted Amount: $110.00
+console.log(convertCurrency(250, 0.85)); // Converted Amount: $212.50
 
